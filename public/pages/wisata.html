@@ -2,6 +2,31 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0ed3cf">
+    <meta name="msapplication-TileColor" content="#0ed3cf">
+    <meta name="theme-color" content="#0ed3cf">
+    <meta property="og:image"
+        content="https://tailwindcomponents.com/storage/10785/conversions/temp22057-ogimage.jpg?v=2023-11-20 02:03:41" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="https://tailwindcomponents.com/component/tailwind-css-projects-table/landing" />
+    <meta property="og:title" content="Tailwind CSS Projects table by Gleb Varganov" />
+    <meta property="og:description" content="Tailwind CSS projects table component" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TwComponents" />
+    <meta name="twitter:title" content="Tailwind CSS Projects table by Gleb Varganov" />
+    <meta name="twitter:description" content="Tailwind CSS projects table component" />
+    <meta name="twitter:image"
+        content="https://tailwindcomponents.com/storage/10785/conversions/temp22057-ogimage.jpg?v=2023-11-20 02:03:41" />
+    <link rel="canonical" href="https://tailwindcomponents.com/component/tailwind-css-projects-table" itemprop="URL">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Dashboard Pariwisata Jawa Barat</title>
@@ -11,6 +36,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -438,119 +464,222 @@
                         <h1 class="text-2xl font-semibold">Wisata</h1>
                     </div>
 
-                    
 
-            <!-- Notification panel -->
-            <!-- Backdrop -->
-            <div x-transition:enter="transition duration-300 ease-in-out" x-transition:enter-start="opacity-0"
-                x-transition:enter-end="opacity-100" x-transition:leave="transition duration-300 ease-in-out"
-                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-                x-show="isNotificationsPanelOpen" @click="isNotificationsPanelOpen = false"
-                class="fixed inset-0 z-10 bg-primary-darker" style="opacity: 0.5" aria-hidden="true"></div>
-            <!-- Panel -->
-            <section x-transition:enter="transition duration-300 ease-in-out transform sm:duration-500"
-                x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
-                x-transition:leave="transition duration-300 ease-in-out transform sm:duration-500"
-                x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
-                x-ref="notificationsPanel" x-show="isNotificationsPanelOpen"
-                @keydown.escape="isNotificationsPanelOpen = false" tabindex="-1"
-                aria-labelledby="notificationPanelLabel"
-                class="fixed inset-y-0 z-20 w-full max-w-xs bg-white dark:bg-darker dark:text-light sm:max-w-md focus:outline-none">
-                <div class="absolute right-0 p-2 transform translate-x-full">
-                    <!-- Close button -->
-                    <button @click="isNotificationsPanelOpen = false"
-                        class="p-2 text-white rounded-md focus:outline-none focus:ring">
-                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex flex-col h-screen" x-data="{ activeTabe: 'action' }">
-                    <!-- Panel header -->
-                    <div class="flex-shrink-0">
-                        <div class="flex items-center justify-between px-4 pt-4 border-b dark:border-primary-darker">
-                            <h2 id="notificationPanelLabel" class="pb-4 font-semibold">Notifications</h2>
-                            <div class="space-x-2">
-                                <button @click.prevent="activeTabe = 'action'"
-                                    class="px-px pb-4 transition-all duration-200 transform translate-y-px border-b focus:outline-none"
-                                    :class="{'border-primary-dark dark:border-primary': activeTabe == 'action', 'border-transparent': activeTabe != 'action'}">
-                                    Action
+
+                    <div class="w-full lg:w-5/6 mx-auto">
+                        <div class="bg-white shadow-md rounded my-6 overflow-x-auto">
+                            <table class="min-w-max w-full table-auto mx-auto">
+                                <button class="add-button bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="rgba(255,255,255,1)"></path></svg>
+                                    tambah
                                 </button>
-                                <button @click.prevent="activeTabe = 'user'"
-                                    class="px-px pb-4 transition-all duration-200 transform translate-y-px border-b focus:outline-none"
-                                    :class="{'border-primary-dark dark:border-primary': activeTabe == 'user', 'border-transparent': activeTabe != 'user'}">
-                                    User
-                                </button>
+                                <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Tempat Wisata</th>
+                                    <th class="py-3 px-6 text-center">Status</th>
+                                    <th class="py-3 px-6 text-center">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-gray-600 text-sm font-light">
+                                    <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                        <td class="py-3 px-6 text-left">
+                                            <div class="flex items-center">
+                                                <div class="mr-2">
+                                                    <img class="w-6 h-6 rounded-full"
+                                                        src="https://randomuser.me/api/portraits/men/1.jpg" />
+                                                </div>
+                                                <span>musa</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <span
+                                                class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">Active</span>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <div class="flex item-center justify-center">
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
+                                        <td class="py-3 px-6 text-left">
+                                            <div class="flex items-center">
+                                                <div class="mr-2">
+                                                    <img class="w-6 h-6 rounded-full"
+                                                        src="https://randomuser.me/api/portraits/women/2.jpg" />
+                                                </div>
+                                                <span>Anita Rodriquez</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <span
+                                                class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <div class="flex item-center justify-center">
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                        <td class="py-3 px-6 text-left">
+                                            <div class="flex items-center">
+                                                <div class="mr-2">
+                                                    <img class="w-6 h-6 rounded-full"
+                                                        src="https://randomuser.me/api/portraits/women/7.jpg" />
+                                                </div>
+                                                <span>Cora Key</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <span
+                                                class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">Pending</span>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <div class="flex item-center justify-center">
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </main>
+
+
+
+                <!-- Notification panel -->
+                <!-- Backdrop -->
+                <div x-transition:enter="transition duration-300 ease-in-out" x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100" x-transition:leave="transition duration-300 ease-in-out"
+                    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                    x-show="isNotificationsPanelOpen" @click="isNotificationsPanelOpen = false"
+                    class="fixed inset-0 z-10 bg-primary-darker" style="opacity: 0.5" aria-hidden="true"></div>
+                <!-- Panel -->
+                <section x-transition:enter="transition duration-300 ease-in-out transform sm:duration-500"
+                    x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+                    x-transition:leave="transition duration-300 ease-in-out transform sm:duration-500"
+                    x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
+                    x-ref="notificationsPanel" x-show="isNotificationsPanelOpen"
+                    @keydown.escape="isNotificationsPanelOpen = false" tabindex="-1"
+                    aria-labelledby="notificationPanelLabel"
+                    class="fixed inset-y-0 z-20 w-full max-w-xs bg-white dark:bg-darker dark:text-light sm:max-w-md focus:outline-none">
+                    <div class="absolute right-0 p-2 transform translate-x-full">
+                        <!-- Close button -->
+                        <button @click="isNotificationsPanelOpen = false"
+                            class="p-2 text-white rounded-md focus:outline-none focus:ring">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col h-screen" x-data="{ activeTabe: 'action' }">
+                        <!-- Panel header -->
+                        <div class="flex-shrink-0">
+                            <div
+                                class="flex items-center justify-between px-4 pt-4 border-b dark:border-primary-darker">
+                                <h2 id="notificationPanelLabel" class="pb-4 font-semibold">Notifications</h2>
+                                <div class="space-x-2">
+                                    <button @click.prevent="activeTabe = 'action'"
+                                        class="px-px pb-4 transition-all duration-200 transform translate-y-px border-b focus:outline-none"
+                                        :class="{'border-primary-dark dark:border-primary': activeTabe == 'action', 'border-transparent': activeTabe != 'action'}">
+                                        Action
+                                    </button>
+                                    <button @click.prevent="activeTabe = 'user'"
+                                        class="px-px pb-4 transition-all duration-200 transform translate-y-px border-b focus:outline-none"
+                                        :class="{'border-primary-dark dark:border-primary': activeTabe == 'user', 'border-transparent': activeTabe != 'user'}">
+                                        User
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Panel content (tabs) -->
-                    <div class="flex-1 pt-4 overflow-y-hidden hover:overflow-y-auto">
-                        <!-- Action tab -->
-                        <div class="space-y-4" x-show.transition.in="activeTabe == 'action'">
-                            <a href="#" class="block">
-                                <div class="flex px-4 space-x-4">
-                                    <div class="relative flex-shrink-0">
-                                        <span
-                                            class="z-10 inline-block p-2 overflow-visible rounded-full bg-primary-50 text-primary-light dark:bg-primary-darker">
-                                            <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                                            </svg>
-                                        </span>
-                                        <div
-                                            class="absolute h-24 p-px -mt-3 -ml-px bg-primary-50 left-1/2 dark:bg-primary-darker">
-                                        </div>
-                                    </div>
-                                    <div class="flex-1 overflow-hidden">
-                                        <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
-                                            "Pasabar Dashboard"
-                                        </h5>
-                                        <p class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
-                                            Looks like there might be a new theme soon
-                                        </p>
-                                        <span class="text-sm font-normal text-gray-400 dark:text-primary-light"> 9h ago
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="block">
-                                <div class="flex px-4 space-x-4">
-                                    <div class="relative flex-shrink-0">
-                                        <span
-                                            class="inline-block p-2 overflow-visible rounded-full bg-primary-50 text-primary-light dark:bg-primary-darker">
-                                            <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                                            </svg>
-                                        </span>
-                                        <div
-                                            class="absolute h-24 p-px -mt-3 -ml-px bg-primary-50 left-1/2 dark:bg-primary-darker">
-                                        </div>
-                                    </div>
-                                    <div class="flex-1 overflow-hidden">
-                                        <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
-                                            Pasabar Dashboard v0.0.2 was released
-                                        </h5>
-                                        <p class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
-                                            Successful new version was released
-                                        </p>
-                                        <span class="text-sm font-normal text-gray-400 dark:text-primary-light"> 2d ago
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                            <template x-for="i in 20" x-key="i">
+                        <!-- Panel content (tabs) -->
+                        <div class="flex-1 pt-4 overflow-y-hidden hover:overflow-y-auto">
+                            <!-- Action tab -->
+                            <div class="space-y-4" x-show.transition.in="activeTabe == 'action'">
                                 <a href="#" class="block">
                                     <div class="flex px-4 space-x-4">
                                         <div class="relative flex-shrink-0">
                                             <span
-                                                class="inline-block p-2 overflow-visible rounded-full bg-primary-50 text-primary-light dark:bg-primary-darker">
+                                                class="z-10 inline-block p-2 overflow-visible rounded-full bg-primary-50 text-primary-light dark:bg-primary-darker">
                                                 <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                     viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -571,201 +700,263 @@
                                                 Looks like there might be a new theme soon
                                             </p>
                                             <span class="text-sm font-normal text-gray-400 dark:text-primary-light"> 9h
-                                                ago </span>
+                                                ago
+                                            </span>
                                         </div>
                                     </div>
                                 </a>
-                            </template>
+                                <a href="#" class="block">
+                                    <div class="flex px-4 space-x-4">
+                                        <div class="relative flex-shrink-0">
+                                            <span
+                                                class="inline-block p-2 overflow-visible rounded-full bg-primary-50 text-primary-light dark:bg-primary-darker">
+                                                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                                </svg>
+                                            </span>
+                                            <div
+                                                class="absolute h-24 p-px -mt-3 -ml-px bg-primary-50 left-1/2 dark:bg-primary-darker">
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 overflow-hidden">
+                                            <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
+                                                Pasabar Dashboard v0.0.2 was released
+                                            </h5>
+                                            <p
+                                                class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
+                                                Successful new version was released
+                                            </p>
+                                            <span class="text-sm font-normal text-gray-400 dark:text-primary-light"> 2d
+                                                ago
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <template x-for="i in 20" x-key="i">
+                                    <a href="#" class="block">
+                                        <div class="flex px-4 space-x-4">
+                                            <div class="relative flex-shrink-0">
+                                                <span
+                                                    class="inline-block p-2 overflow-visible rounded-full bg-primary-50 text-primary-light dark:bg-primary-darker">
+                                                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                                    </svg>
+                                                </span>
+                                                <div
+                                                    class="absolute h-24 p-px -mt-3 -ml-px bg-primary-50 left-1/2 dark:bg-primary-darker">
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 overflow-hidden">
+                                                <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
+                                                    "Pasabar Dashboard"
+                                                </h5>
+                                                <p
+                                                    class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
+                                                    Looks like there might be a new theme soon
+                                                </p>
+                                                <span class="text-sm font-normal text-gray-400 dark:text-primary-light">
+                                                    9h
+                                                    ago </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </template>
+                            </div>
+
+                            <!-- User tab -->
                         </div>
-
-                        <!-- User tab -->
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Search panel -->
-            <!-- Backdrop -->
-            <div x-transition:enter="transition duration-300 ease-in-out" x-transition:enter-start="opacity-0"
-                x-transition:enter-end="opacity-100" x-transition:leave="transition duration-300 ease-in-out"
-                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="isSearchPanelOpen"
-                @click="isSearchPanelOpen = false" class="fixed inset-0 z-10 bg-primary-darker" style="opacity: 0.5"
-                aria-hidden="ture"></div>
-            <!-- Panel -->
-            <section x-transition:enter="transition duration-300 ease-in-out transform sm:duration-500"
-                x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
-                x-transition:leave="transition duration-300 ease-in-out transform sm:duration-500"
-                x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
-                x-show="isSearchPanelOpen" @keydown.escape="isSearchPanelOpen = false"
-                class="fixed inset-y-0 z-20 w-full max-w-xs bg-white shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none">
-                <div class="absolute right-0 p-2 transform translate-x-full">
-                    <!-- Close button -->
-                    <button @click="isSearchPanelOpen = false"
-                        class="p-2 text-white rounded-md focus:outline-none focus:ring">
-                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-
-                <h2 class="sr-only">Search panel</h2>
-                <!-- Panel content -->
-                <div class="flex flex-col h-screen">
-                    <!-- Panel header (Search input) -->
-                    <div
-                        class="relative flex-shrink-0 px-4 py-8 text-gray-400 border-b dark:border-primary-darker dark:focus-within:text-light focus-within:text-gray-700">
-                        <span class="absolute inset-y-0 inline-flex items-center px-4">
+                <!-- Search panel -->
+                <!-- Backdrop -->
+                <div x-transition:enter="transition duration-300 ease-in-out" x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100" x-transition:leave="transition duration-300 ease-in-out"
+                    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="isSearchPanelOpen"
+                    @click="isSearchPanelOpen = false" class="fixed inset-0 z-10 bg-primary-darker" style="opacity: 0.5"
+                    aria-hidden="ture"></div>
+                <!-- Panel -->
+                <section x-transition:enter="transition duration-300 ease-in-out transform sm:duration-500"
+                    x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+                    x-transition:leave="transition duration-300 ease-in-out transform sm:duration-500"
+                    x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
+                    x-show="isSearchPanelOpen" @keydown.escape="isSearchPanelOpen = false"
+                    class="fixed inset-y-0 z-20 w-full max-w-xs bg-white shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none">
+                    <div class="absolute right-0 p-2 transform translate-x-full">
+                        <!-- Close button -->
+                        <button @click="isSearchPanelOpen = false"
+                            class="p-2 text-white rounded-md focus:outline-none focus:ring">
                             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    d="M6 18L18 6M6 6l12 12" />
                             </svg>
-                        </span>
-                        <input x-ref="searchInput" type="text"
-                            class="w-full py-2 pl-10 pr-4 border rounded-full dark:bg-dark dark:border-transparent dark:text-light focus:outline-none focus:ring"
-                            placeholder="Search..." />
+                        </button>
                     </div>
-                </div>
-            </section>
+
+                    <h2 class="sr-only">Search panel</h2>
+                    <!-- Panel content -->
+                    <div class="flex flex-col h-screen">
+                        <!-- Panel header (Search input) -->
+                        <div
+                            class="relative flex-shrink-0 px-4 py-8 text-gray-400 border-b dark:border-primary-darker dark:focus-within:text-light focus-within:text-gray-700">
+                            <span class="absolute inset-y-0 inline-flex items-center px-4">
+                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </span>
+                            <input x-ref="searchInput" type="text"
+                                class="w-full py-2 pl-10 pr-4 border rounded-full dark:bg-dark dark:border-transparent dark:text-light focus:outline-none focus:ring"
+                                placeholder="Search..." />
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-    </div>
 
-    <!-- All javascript code in this project for now is just for demo DON'T RELY ON IT  -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
-    <script src="../build/js/script.js"></script>
-    <script>
-        const setup = () => {
-            const getTheme = () => {
-                if (window.localStorage.getItem('dark')) {
-                    return JSON.parse(window.localStorage.getItem('dark'))
+        <!-- All javascript code in this project for now is just for demo DON'T RELY ON IT  -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
+        <script src="../build/js/script.js"></script>
+        <script>
+            const setup = () => {
+                const getTheme = () => {
+                    if (window.localStorage.getItem('dark')) {
+                        return JSON.parse(window.localStorage.getItem('dark'))
+                    }
+
+                    return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
                 }
 
-                return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-            }
-
-            const setTheme = (value) => {
-                window.localStorage.setItem('dark', value)
-            }
-
-            const getColor = () => {
-                if (window.localStorage.getItem('color')) {
-                    return window.localStorage.getItem('color')
+                const setTheme = (value) => {
+                    window.localStorage.setItem('dark', value)
                 }
-                return 'cyan'
-            }
 
-            const setColors = (color) => {
-                const root = document.documentElement
-                root.style.setProperty('--color-primary', `var(--color-${color})`)
-                root.style.setProperty('--color-primary-50', `var(--color-${color}-50)`)
-                root.style.setProperty('--color-primary-100', `var(--color-${color}-100)`)
-                root.style.setProperty('--color-primary-light', `var(--color-${color}-light)`)
-                root.style.setProperty('--color-primary-lighter', `var(--color-${color}-lighter)`)
-                root.style.setProperty('--color-primary-dark', `var(--color-${color}-dark)`)
-                root.style.setProperty('--color-primary-darker', `var(--color-${color}-darker)`)
-                this.selectedColor = color
-                window.localStorage.setItem('color', color)
-                //
-            }
-
-            const updateBarChart = (on) => {
-                const data = {
-                    data: randomData(),
-                    backgroundColor: 'rgb(207, 250, 254)',
+                const getColor = () => {
+                    if (window.localStorage.getItem('color')) {
+                        return window.localStorage.getItem('color')
+                    }
+                    return 'cyan'
                 }
-                if (on) {
-                    barChart.data.datasets.push(data)
-                    barChart.update()
-                } else {
-                    barChart.data.datasets.splice(1)
-                    barChart.update()
+
+                const setColors = (color) => {
+                    const root = document.documentElement
+                    root.style.setProperty('--color-primary', `var(--color-${color})`)
+                    root.style.setProperty('--color-primary-50', `var(--color-${color}-50)`)
+                    root.style.setProperty('--color-primary-100', `var(--color-${color}-100)`)
+                    root.style.setProperty('--color-primary-light', `var(--color-${color}-light)`)
+                    root.style.setProperty('--color-primary-lighter', `var(--color-${color}-lighter)`)
+                    root.style.setProperty('--color-primary-dark', `var(--color-${color}-dark)`)
+                    root.style.setProperty('--color-primary-darker', `var(--color-${color}-darker)`)
+                    this.selectedColor = color
+                    window.localStorage.setItem('color', color)
+                    //
+                }
+
+                const updateBarChart = (on) => {
+                    const data = {
+                        data: randomData(),
+                        backgroundColor: 'rgb(207, 250, 254)',
+                    }
+                    if (on) {
+                        barChart.data.datasets.push(data)
+                        barChart.update()
+                    } else {
+                        barChart.data.datasets.splice(1)
+                        barChart.update()
+                    }
+                }
+
+                const updateDoughnutChart = (on) => {
+                    const data = random()
+                    const color = 'rgb(207, 250, 254)'
+                    if (on) {
+                        doughnutChart.data.labels.unshift('Seb')
+                        doughnutChart.data.datasets[0].data.unshift(data)
+                        doughnutChart.data.datasets[0].backgroundColor.unshift(color)
+                        doughnutChart.update()
+                    } else {
+                        doughnutChart.data.labels.splice(0, 1)
+                        doughnutChart.data.datasets[0].data.splice(0, 1)
+                        doughnutChart.data.datasets[0].backgroundColor.splice(0, 1)
+                        doughnutChart.update()
+                    }
+                }
+
+                const updateLineChart = () => {
+                    lineChart.data.datasets[0].data.reverse()
+                    lineChart.update()
+                }
+
+                return {
+                    loading: true,
+                    isDark: getTheme(),
+                    toggleTheme() {
+                        this.isDark = !this.isDark
+                        setTheme(this.isDark)
+                    },
+                    setLightTheme() {
+                        this.isDark = false
+                        setTheme(this.isDark)
+                    },
+                    setDarkTheme() {
+                        this.isDark = true
+                        setTheme(this.isDark)
+                    },
+                    color: getColor(),
+                    selectedColor: 'cyan',
+                    setColors,
+                    toggleSidbarMenu() {
+                        this.isSidebarOpen = !this.isSidebarOpen
+                    },
+                    isSettingsPanelOpen: false,
+                    openSettingsPanel() {
+                        this.isSettingsPanelOpen = true
+                        this.$nextTick(() => {
+                            this.$refs.settingsPanel.focus()
+                        })
+                    },
+                    isNotificationsPanelOpen: false,
+                    openNotificationsPanel() {
+                        this.isNotificationsPanelOpen = true
+                        this.$nextTick(() => {
+                            this.$refs.notificationsPanel.focus()
+                        })
+                    },
+                    isSearchPanelOpen: false,
+                    openSearchPanel() {
+                        this.isSearchPanelOpen = true
+                        this.$nextTick(() => {
+                            this.$refs.searchInput.focus()
+                        })
+                    },
+                    isMobileSubMenuOpen: false,
+                    openMobileSubMenu() {
+                        this.isMobileSubMenuOpen = true
+                        this.$nextTick(() => {
+                            this.$refs.mobileSubMenu.focus()
+                        })
+                    },
+                    isMobileMainMenuOpen: false,
+                    openMobileMainMenu() {
+                        this.isMobileMainMenuOpen = true
+                        this.$nextTick(() => {
+                            this.$refs.mobileMainMenu.focus()
+                        })
+                    },
+                    updateBarChart,
+                    updateDoughnutChart,
+                    updateLineChart,
                 }
             }
-
-            const updateDoughnutChart = (on) => {
-                const data = random()
-                const color = 'rgb(207, 250, 254)'
-                if (on) {
-                    doughnutChart.data.labels.unshift('Seb')
-                    doughnutChart.data.datasets[0].data.unshift(data)
-                    doughnutChart.data.datasets[0].backgroundColor.unshift(color)
-                    doughnutChart.update()
-                } else {
-                    doughnutChart.data.labels.splice(0, 1)
-                    doughnutChart.data.datasets[0].data.splice(0, 1)
-                    doughnutChart.data.datasets[0].backgroundColor.splice(0, 1)
-                    doughnutChart.update()
-                }
-            }
-
-            const updateLineChart = () => {
-                lineChart.data.datasets[0].data.reverse()
-                lineChart.update()
-            }
-
-            return {
-                loading: true,
-                isDark: getTheme(),
-                toggleTheme() {
-                    this.isDark = !this.isDark
-                    setTheme(this.isDark)
-                },
-                setLightTheme() {
-                    this.isDark = false
-                    setTheme(this.isDark)
-                },
-                setDarkTheme() {
-                    this.isDark = true
-                    setTheme(this.isDark)
-                },
-                color: getColor(),
-                selectedColor: 'cyan',
-                setColors,
-                toggleSidbarMenu() {
-                    this.isSidebarOpen = !this.isSidebarOpen
-                },
-                isSettingsPanelOpen: false,
-                openSettingsPanel() {
-                    this.isSettingsPanelOpen = true
-                    this.$nextTick(() => {
-                        this.$refs.settingsPanel.focus()
-                    })
-                },
-                isNotificationsPanelOpen: false,
-                openNotificationsPanel() {
-                    this.isNotificationsPanelOpen = true
-                    this.$nextTick(() => {
-                        this.$refs.notificationsPanel.focus()
-                    })
-                },
-                isSearchPanelOpen: false,
-                openSearchPanel() {
-                    this.isSearchPanelOpen = true
-                    this.$nextTick(() => {
-                        this.$refs.searchInput.focus()
-                    })
-                },
-                isMobileSubMenuOpen: false,
-                openMobileSubMenu() {
-                    this.isMobileSubMenuOpen = true
-                    this.$nextTick(() => {
-                        this.$refs.mobileSubMenu.focus()
-                    })
-                },
-                isMobileMainMenuOpen: false,
-                openMobileMainMenu() {
-                    this.isMobileMainMenuOpen = true
-                    this.$nextTick(() => {
-                        this.$refs.mobileMainMenu.focus()
-                    })
-                },
-                updateBarChart,
-                updateDoughnutChart,
-                updateLineChart,
-            }
-        }
-    </script>
+        </script>
 </body>
 
 </html>
