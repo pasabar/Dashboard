@@ -29,7 +29,7 @@
             <!-- Dashboards links -->
             <div x-data="{ isActive: true, open: true}">
               <!-- active & hover classes 'bg-primary-100 dark:bg-primary' -->
-              <a href="#" 
+              <a href="#"
                 class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
                 :class="{'bg-primary-100 dark:bg-primary': isActive || open}" role="button" aria-haspopup="true"
                 :aria-expanded="(open || isActive) ? 'true' : 'false'">
@@ -59,7 +59,10 @@
                 :aria-expanded="(open || isActive) ? 'true' : 'false'">
                 <span aria-hidden="true">
                   <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor"><path d="M16.9497 11.9497C18.7347 10.1648 19.3542 7.65558 18.8081 5.36796L21.303 4.2987C21.5569 4.18992 21.8508 4.30749 21.9596 4.56131C21.9862 4.62355 22 4.69056 22 4.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V7L5.12892 5.65904C4.70023 7.86632 5.34067 10.2402 7.05025 11.9497L12 16.8995L16.9497 11.9497ZM15.5355 10.5355L12 14.0711L8.46447 10.5355C6.51184 8.58291 6.51184 5.41709 8.46447 3.46447C10.4171 1.51184 13.5829 1.51184 15.5355 3.46447C17.4882 5.41709 17.4882 8.58291 15.5355 10.5355Z"></path>
+                    stroke="currentColor">
+                    <path
+                      d="M16.9497 11.9497C18.7347 10.1648 19.3542 7.65558 18.8081 5.36796L21.303 4.2987C21.5569 4.18992 21.8508 4.30749 21.9596 4.56131C21.9862 4.62355 22 4.69056 22 4.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V7L5.12892 5.65904C4.70023 7.86632 5.34067 10.2402 7.05025 11.9497L12 16.8995L16.9497 11.9497ZM15.5355 10.5355L12 14.0711L8.46447 10.5355C6.51184 8.58291 6.51184 5.41709 8.46447 3.46447C10.4171 1.51184 13.5829 1.51184 15.5355 3.46447C17.4882 5.41709 17.4882 8.58291 15.5355 10.5355Z">
+                    </path>
                   </svg>
                 </span>
                 <span class="ml-2 text-sm"> Wisata </span>
@@ -74,14 +77,15 @@
             <!-- Restaurant -->
             <div x-data="{ isActive: false, open: false }">
               <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-              <a href="./public/pages/restaurant.html" 
+              <a href="./public/pages/restaurant.html"
                 class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
                 :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
                 :aria-expanded="(open || isActive) ? 'true' : 'false'">
                 <span aria-hidden="true">
                   <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
-                    <path d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
+                    <path
+                      d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
                   </svg>
                 </span>
                 <span class="ml-2 text-sm"> Restaurant </span>
@@ -193,16 +197,8 @@
                   @keydown.escape="open = false"
                   class="absolute right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark focus:outline-none"
                   tabindex="-1" role="menu" aria-orientation="vertical" aria-label="User menu">
-                  <a href="#" role="menuitem"
-                    class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary">
-                    Your Profile
-                  </a>
-                  <a href="#" role="menuitem"
-                    class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary">
-                    Settings
-                  </a>
-                  <a href="#" role="menuitem"
-                    class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary">
+                  <a href="#" id="logout" role="menuitem" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary
+                    onclick=" logout()">
                     Logout
                   </a>
                 </div>
@@ -275,16 +271,8 @@
                   x-transition:leave-end="translate-y-1/2 opacity-0" @click.away="open = false"
                   class="absolute right-0 w-48 py-1 origin-top-right bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark"
                   role="menu" aria-orientation="vertical" aria-label="User menu">
-                  <a href="#" role="menuitem"
-                    class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary">
-                    Your Profile
-                  </a>
-                  <a href="#" role="menuitem"
-                    class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary">
-                    Settings
-                  </a>
-                  <a href="#" role="menuitem"
-                    class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary">
+                  <a href="#" id="logout" role="menuitem" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary
+                    onclick=" logout()">
                     Logout
                   </a>
                 </div>
@@ -298,7 +286,7 @@
               <!-- Dashboards links -->
               <div x-data="{ isActive: true, open: true}">
                 <!-- active & hover classes 'bg-primary-100 dark:bg-primary' -->
-                <a href="./index.html" 
+                <a href="./index.html"
                   class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
                   :class="{'bg-primary-100 dark:bg-primary': isActive || open}" role="button" aria-haspopup="true"
                   :aria-expanded="(open || isActive) ? 'true' : 'false'">
@@ -321,53 +309,57 @@
               </div>
 
               <!--  Tempat Wisata -->
-            <div x-data="{ isActive: false, open: false }">
-              <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-              <a href="./public/pages/wisata.html" 
-                class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
-                :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
-                :aria-expanded="(open || isActive) ? 'true' : 'false'">
-                <span aria-hidden="true">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor"><path d="M16.9497 11.9497C18.7347 10.1648 19.3542 7.65558 18.8081 5.36796L21.303 4.2987C21.5569 4.18992 21.8508 4.30749 21.9596 4.56131C21.9862 4.62355 22 4.69056 22 4.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V7L5.12892 5.65904C4.70023 7.86632 5.34067 10.2402 7.05025 11.9497L12 16.8995L16.9497 11.9497ZM15.5355 10.5355L12 14.0711L8.46447 10.5355C6.51184 8.58291 6.51184 5.41709 8.46447 3.46447C10.4171 1.51184 13.5829 1.51184 15.5355 3.46447C17.4882 5.41709 17.4882 8.58291 15.5355 10.5355Z"></path>
-                  </svg>
-                </span>
-                <span class="ml-2 text-sm"> Wisata </span>
-                </span>
-              </a>
-              <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
-                <!-- active & hover classes 'text-gray-700 dark:text-light' -->
-                <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+              <div x-data="{ isActive: false, open: false }">
+                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                <a href="./public/pages/wisata.html"
+                  class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                  :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
+                  :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                  <span aria-hidden="true">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        d="M16.9497 11.9497C18.7347 10.1648 19.3542 7.65558 18.8081 5.36796L21.303 4.2987C21.5569 4.18992 21.8508 4.30749 21.9596 4.56131C21.9862 4.62355 22 4.69056 22 4.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V7L5.12892 5.65904C4.70023 7.86632 5.34067 10.2402 7.05025 11.9497L12 16.8995L16.9497 11.9497ZM15.5355 10.5355L12 14.0711L8.46447 10.5355C6.51184 8.58291 6.51184 5.41709 8.46447 3.46447C10.4171 1.51184 13.5829 1.51184 15.5355 3.46447C17.4882 5.41709 17.4882 8.58291 15.5355 10.5355Z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="ml-2 text-sm"> Wisata </span>
+                  </span>
+                </a>
+                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
+                  <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                  <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                </div>
               </div>
-            </div>
 
               <!-- Restaurant -->
-            <div x-data="{ isActive: false, open: false }">
-              <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-              <a href="./public/pages/restaurant.html" 
-                class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
-                :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
-                :aria-expanded="(open || isActive) ? 'true' : 'false'">
-                <span aria-hidden="true">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
-                  </svg>
-                </span>
-                <span class="ml-2 text-sm"> Restaurant </span>
-                <span aria-hidden="true" class="ml-auto">
-                  <!-- active class 'rotate-180' -->
-                </span>
-              </a>
-              <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
-                <!-- active & hover classes 'text-gray-700 dark:text-light' -->
-                <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+              <div x-data="{ isActive: false, open: false }">
+                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                <a href="./public/pages/restaurant.html"
+                  class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                  :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button" aria-haspopup="true"
+                  :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                  <span aria-hidden="true">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
+                    </svg>
+                  </span>
+                  <span class="ml-2 text-sm"> Restaurant </span>
+                  <span aria-hidden="true" class="ml-auto">
+                    <!-- active class 'rotate-180' -->
+                  </span>
+                </a>
+                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
+                  <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                  <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                </div>
               </div>
-            </div>
         </header>
 
         <!-- Main content -->
-          <main>
+        <main>
           <!-- Content header -->
           <div class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
             <h1 class="text-2xl font-semibold">Dashboard</h1>
@@ -570,7 +562,8 @@
           <div>Pasabar &copy; 2023</div>
           <div>
             Made by
-            <a href="https://github.Fahadabdul17" target="_blank" class="text-blue-500 hover:underline">Pasabar - Fahad & Ryaas</a>
+            <a href="https://github.Fahadabdul17" target="_blank" class="text-blue-500 hover:underline">Pasabar - Fahad
+              & Ryaas</a>
           </div>
         </footer>
       </div>
@@ -767,7 +760,7 @@
                     </div>
                     <div class="flex-1 overflow-hidden">
                       <h5 class="text-sm font-semibold text-gray-600 dark:text-light">
-                        "Pasabar Dashboard" 
+                        "Pasabar Dashboard"
                       </h5>
                       <p class="text-sm font-normal text-gray-400 truncate dark:text-primary-lighter">
                         Looks like there might be a new theme soon
@@ -833,138 +826,11 @@
   <!-- All javascript code in this project for now is just for demo DON'T RELY ON IT  -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
   <script src="./public/build/js/script.js"></script>
-  <script>
-    const setup = () => {
-      const getTheme = () => {
-        if (window.localStorage.getItem('dark')) {
-          return JSON.parse(window.localStorage.getItem('dark'))
-        }
+  <script src="./public/build/js/main.js"></script>
 
-        return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      }
 
-      const setTheme = (value) => {
-        window.localStorage.setItem('dark', value)
-      }
-
-      const getColor = () => {
-        if (window.localStorage.getItem('color')) {
-          return window.localStorage.getItem('color')
-        }
-        return 'cyan'
-      }
-
-      const setColors = (color) => {
-        const root = document.documentElement
-        root.style.setProperty('--color-primary', `var(--color-${color})`)
-        root.style.setProperty('--color-primary-50', `var(--color-${color}-50)`)
-        root.style.setProperty('--color-primary-100', `var(--color-${color}-100)`)
-        root.style.setProperty('--color-primary-light', `var(--color-${color}-light)`)
-        root.style.setProperty('--color-primary-lighter', `var(--color-${color}-lighter)`)
-        root.style.setProperty('--color-primary-dark', `var(--color-${color}-dark)`)
-        root.style.setProperty('--color-primary-darker', `var(--color-${color}-darker)`)
-        this.selectedColor = color
-        window.localStorage.setItem('color', color)
-        //
-      }
-
-      const updateBarChart = (on) => {
-        const data = {
-          data: randomData(),
-          backgroundColor: 'rgb(207, 250, 254)',
-        }
-        if (on) {
-          barChart.data.datasets.push(data)
-          barChart.update()
-        } else {
-          barChart.data.datasets.splice(1)
-          barChart.update()
-        }
-      }
-
-      const updateDoughnutChart = (on) => {
-        const data = random()
-        const color = 'rgb(207, 250, 254)'
-        if (on) {
-          doughnutChart.data.labels.unshift('Seb')
-          doughnutChart.data.datasets[0].data.unshift(data)
-          doughnutChart.data.datasets[0].backgroundColor.unshift(color)
-          doughnutChart.update()
-        } else {
-          doughnutChart.data.labels.splice(0, 1)
-          doughnutChart.data.datasets[0].data.splice(0, 1)
-          doughnutChart.data.datasets[0].backgroundColor.splice(0, 1)
-          doughnutChart.update()
-        }
-      }
-
-      const updateLineChart = () => {
-        lineChart.data.datasets[0].data.reverse()
-        lineChart.update()
-      }
-
-      return {
-        loading: true,
-        isDark: getTheme(),
-        toggleTheme() {
-          this.isDark = !this.isDark
-          setTheme(this.isDark)
-        },
-        setLightTheme() {
-          this.isDark = false
-          setTheme(this.isDark)
-        },
-        setDarkTheme() {
-          this.isDark = true
-          setTheme(this.isDark)
-        },
-        color: getColor(),
-        selectedColor: 'cyan',
-        setColors,
-        toggleSidbarMenu() {
-          this.isSidebarOpen = !this.isSidebarOpen
-        },
-        isSettingsPanelOpen: false,
-        openSettingsPanel() {
-          this.isSettingsPanelOpen = true
-          this.$nextTick(() => {
-            this.$refs.settingsPanel.focus()
-          })
-        },
-        isNotificationsPanelOpen: false,
-        openNotificationsPanel() {
-          this.isNotificationsPanelOpen = true
-          this.$nextTick(() => {
-            this.$refs.notificationsPanel.focus()
-          })
-        },
-        isSearchPanelOpen: false,
-        openSearchPanel() {
-          this.isSearchPanelOpen = true
-          this.$nextTick(() => {
-            this.$refs.searchInput.focus()
-          })
-        },
-        isMobileSubMenuOpen: false,
-        openMobileSubMenu() {
-          this.isMobileSubMenuOpen = true
-          this.$nextTick(() => {
-            this.$refs.mobileSubMenu.focus()
-          })
-        },
-        isMobileMainMenuOpen: false,
-        openMobileMainMenu() {
-          this.isMobileMainMenuOpen = true
-          this.$nextTick(() => {
-            this.$refs.mobileMainMenu.focus()
-          })
-        },
-        updateBarChart,
-        updateDoughnutChart,
-        updateLineChart,
-      }
-    }
-  </script>
+  <!-- logout.js -->
+  <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.0.8/js/controller/cont_logout.js"></script>
 </body>
 
 </html>
