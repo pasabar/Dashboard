@@ -70,8 +70,8 @@ const displayCatalogData = (catalogData, tableBodyId) => {
           </span>
         </td>
         <td class="px-4 py-3">
-          <a href="#" class="edit-link" data-ctlloyeeid="${catalog.nomorid}">Edit</a>
-          <a href="#" class="delete-link" data-ctlloyeeid="${catalog.nomorid}">Delete</a>
+          <a href="#" class="edit-link" data-catalogid="${catalog.nomorid}">Edit</a>
+          <a href="#" class="delete-link" data-catalogid="${catalog.nomorid}">Delete</a>
         </td>
       `
 
