@@ -25,7 +25,7 @@ const getCatalogData = async () => {
     const data = await response.json()
 
     if (data.status === true) {
-      displayCatalogData(data.data, 'catalogBody')
+      displayCatalogData(data.data, 'catalogDataBody')
     } else {
       Swal.fire({
         icon: 'error',
