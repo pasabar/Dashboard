@@ -506,6 +506,10 @@
                         <textarea id="newDeskripsi" name="new" class="w-full mb-4 p-2 border text-black"
                           required></textarea>
 
+                        <label for="newLokasi" class="font-semibold text-gray-800">Lokasi</label>
+                        <textarea id="newLokasi" name="new" class="w-full mb-4 p-2 border text-black"
+                          required></textarea>
+
                         <label for="newImage" class="font-semibold text-gray-800">Image URL</label>
                         <input type="url" id="newImage" name="newImage" class="w-full mb-4 p-2 border text-black"
                           required>
@@ -531,46 +535,7 @@
                   <!-- Modal update-->
 
                   <!-- Modal update -->
-                  <div id="updateDialog" x-show="isUpdateFormOpen" class="dialog">
-                    <div class="dialog-overlay" x-on:click="isUpdateFormOpen = false"></div>
-                    <div class="dialog-content">
-                      <!-- Form edit di sini -->
-                      <form id="updateForm" action="#" method="POST" class="p-6">
-                        <label for="NomorIdInput" class="font-semibold text-gray-800">Nomor ID</label>
-                        <input type="text" id="NomorIdInput" name="NomorIdInput"
-                          class="w-full mb-4 p-2 border text-black" required>
 
-                        <label for="TitleInput" class="font-semibold text-gray-800">Title</label>
-                        <input type="text" id="TitleInput" name="TitleInput" class="w-full mb-4 p-2 border text-black"
-                          required>
-
-                        <label for="DeskripsiInput" class="font-semibold text-gray-800">Deskripsi</label>
-                        <textarea id="DeskripsiInput" name="DeskripsiInput" class="w-full mb-4 p-2 border text-black"
-                          required></textarea>
-
-                        <label for="ImageInput" class="font-semibold text-gray-800">Image URL</label>
-                        <input type="url" id="ImageInput" name="ImageInput" class="w-full mb-4 p-2 border text-black"
-                          required>
-
-                        <label for="StatusInput" class="font-semibold text-gray-800">Status</label>
-                        <select id="StatusInput" name="StatusInput" class="w-full mb-4 p-2 border text-black"
-                          required>
-                          <option value="active">Active</option>
-                          <option value="inactive">Inactive</option>
-                        </select>
-
-                        <button type="submit" id="updateSubmit"
-                          class="py-2 px-4 inline-flex items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm">
-                          Update
-                        </button>
-
-                        <button type="button" x-on:click="isUpdateFormOpen = false"
-                          class="ml-2 py-2 px-4 inline-flex items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-300 text-gray-800 text-sm">
-                          Batal
-                        </button>
-                      </form>
-                    </div>
-                  </div>
 
 
                   <table class="py-4 min-w-full table-auto mx-auto">
@@ -579,6 +544,7 @@
                         <th class="py-3 px-6 text-left">Nomor ID</th>
                         <th class="py-3 px-6 text-left">Title</th>
                         <th class="py-3 px-6 text-left">Deskripsi</th>
+                        <th class="py-3 px-6 text-left">Lokasi</th>
                         <th class="py-3 px-6 text-left">Image</th>
                         <th class="py-3 px-6 text-left">Status</th>
                         <th class="py-3 px-6 text-left">Actions</th>
@@ -786,14 +752,16 @@
     <script src="../build/js/script.js"></script>
     <script src="../build/js/main.js"></script>
 
-   
+
 
     <!-- <script src="/js/cont_updtcatalog.js"></script> -->
 
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.1.7/js/controller/cont_catalog.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.1.7/js/controller/cont_logout.js">
+    <!-- <script type="module" src="/js/cont_catalog.js"></script>
+    <script type="module" src="/js/cont_insetcatalog.js"></script> -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.1.8/js/controller/cont_catalog.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.1.8/js/controller/cont_logout.js">
     </script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.1.7/js/controller/cont_insertcatalog.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.1.8/js/controller/cont_insertcatalog.js"></script>
 </body>
 
 </html>
