@@ -79,6 +79,31 @@
                             </div>
                         </div>
 
+                        <!--  Tempat Catalog -->
+                        <div x-data="{ isActive: false, open: false }">
+                            <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                            <a href="./katalog.html"
+                                class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                                :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button"
+                                aria-haspopup="true" :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                                <span aria-hidden="true">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path
+                                            d="M6.96407 3H17.0358C17.2844 4.72201 18.7601 6 20.5 6 20.8321 6 21.1626 5.95272 21.4814 5.85957 21.2972 7.64386 19.7937 9 18 9H5.99997C4.20619 9 2.70278 7.64386 2.51849 5.85957 2.83733 5.95272 3.16781 6 3.49997 6 5.23982 6 6.71552 4.72201 6.96407 3ZM16.8994 6.65761C16.3391 6.1724 15.902 5.61986 15.5881 5H8.41184C8.09793 5.61986 7.66084 6.1724 7.10057 6.65761 6.9591 6.78013 6.8145 6.89426 6.66678 7H17.3331C17.1855 6.89426 17.0409 6.78013 16.8994 6.65761ZM21.5 11.5005C22.0376 11.5005 22.5422 11.3591 22.9786 11.1114 22.9927 11.2391 23 11.369 23 11.5005 23 12.8967 22.1825 14.1019 21 14.6637V21H14V19C14 17.8954 13.1046 17 12 17 10.8954 17 10 17.8954 10 19V21H3V14.6637C1.81753 14.1019 1 12.8967 1 11.5005 1 11.369 1.00725 11.2391 1.02138 11.1114 1.45778 11.3591 1.96237 11.5005 2.5 11.5005 3.61042 11.5005 4.57994 10.8972 5.09865 10.0005H18.9013C19.4201 10.8972 20.3896 11.5005 21.5 11.5005ZM18.9632 12.8097C18.5756 12.5812 18.2296 12.3115 17.9252 12.0005H6.07479C5.77042 12.3115 5.42443 12.5812 5.03683 12.8097 4.834 12.9293 4.62683 13.0333 4.41532 13.1218L5 13.3996V19H8C8 17.8954 8.39052 16.9526 9.17157 16.1716 9.95262 15.3905 10.8954 15 12 15 13.1046 15 14.0474 15.3905 14.8284 16.1716 15.6095 16.9526 16 17.8954 16 19H19V13.3996L19.5847 13.1218C19.3732 13.0333 19.166 12.9293 18.9632 12.8097Z"
+                                            fill="rgba(255,255,255,1)">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="ml-2 text-sm"> Katalog </span>
+                                </span>
+                            </a>
+                            <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
+                                <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                                <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                            </div>
+                        </div>
+
                         <!--  Tempat Wisata -->
                         <div x-data="{ isActive: false, open: false }">
                             <!-- active classes 'bg-primary-100 dark:bg-primary' -->
@@ -103,23 +128,23 @@
                             </div>
                         </div>
 
-                        <!--  Tempat Catalog -->
+                        <!--  Hotel -->
                         <div x-data="{ isActive: false, open: false }">
                             <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-                            <a href="./katalog.html"
+                            <a href="./hotel.html"
                                 class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
                                 :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button"
                                 aria-haspopup="true" :aria-expanded="(open || isActive) ? 'true' : 'false'">
                                 <span aria-hidden="true">
                                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
                                         <path
-                                            d="M6.96407 3H17.0358C17.2844 4.72201 18.7601 6 20.5 6 20.8321 6 21.1626 5.95272 21.4814 5.85957 21.2972 7.64386 19.7937 9 18 9H5.99997C4.20619 9 2.70278 7.64386 2.51849 5.85957 2.83733 5.95272 3.16781 6 3.49997 6 5.23982 6 6.71552 4.72201 6.96407 3ZM16.8994 6.65761C16.3391 6.1724 15.902 5.61986 15.5881 5H8.41184C8.09793 5.61986 7.66084 6.1724 7.10057 6.65761 6.9591 6.78013 6.8145 6.89426 6.66678 7H17.3331C17.1855 6.89426 17.0409 6.78013 16.8994 6.65761ZM21.5 11.5005C22.0376 11.5005 22.5422 11.3591 22.9786 11.1114 22.9927 11.2391 23 11.369 23 11.5005 23 12.8967 22.1825 14.1019 21 14.6637V21H14V19C14 17.8954 13.1046 17 12 17 10.8954 17 10 17.8954 10 19V21H3V14.6637C1.81753 14.1019 1 12.8967 1 11.5005 1 11.369 1.00725 11.2391 1.02138 11.1114 1.45778 11.3591 1.96237 11.5005 2.5 11.5005 3.61042 11.5005 4.57994 10.8972 5.09865 10.0005H18.9013C19.4201 10.8972 20.3896 11.5005 21.5 11.5005ZM18.9632 12.8097C18.5756 12.5812 18.2296 12.3115 17.9252 12.0005H6.07479C5.77042 12.3115 5.42443 12.5812 5.03683 12.8097 4.834 12.9293 4.62683 13.0333 4.41532 13.1218L5 13.3996V19H8C8 17.8954 8.39052 16.9526 9.17157 16.1716 9.95262 15.3905 10.8954 15 12 15 13.1046 15 14.0474 15.3905 14.8284 16.1716 15.6095 16.9526 16 17.8954 16 19H19V13.3996L19.5847 13.1218C19.3732 13.0333 19.166 12.9293 18.9632 12.8097Z"
-                                            fill="rgba(255,255,255,1)">
+                                            d="M22 21H2V19H3V4C3 3.44772 3.44772 3 4 3H18C18.5523 3 19 3.44772 19 4V9H21V19H22V21ZM17 19H19V11H13V19H15V13H17V19ZM17 9V5H5V19H11V9H17ZM7 11H9V13H7V11ZM7 15H9V17H7V15ZM7 7H9V9H7V7Z">
                                         </path>
                                     </svg>
                                 </span>
-                                <span class="ml-2 text-sm"> Catalog </span>
+                                <span class="ml-2 text-sm"> Hotel </span>
                                 </span>
                             </a>
                             <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
@@ -127,6 +152,7 @@
                                 <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
                             </div>
                         </div>
+
 
                         <!-- Restaurant -->
                         <div x-data="{ isActive: false, open: false }">
@@ -370,6 +396,31 @@
                                 </div>
                             </div>
 
+                            <!--  Tempat Catalog -->
+                            <div x-data="{ isActive: false, open: false }">
+                                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                                <a href="./katalog.html"
+                                    class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                                    :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button"
+                                    aria-haspopup="true" :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                                    <span aria-hidden="true">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path
+                                                d="M6.96407 3H17.0358C17.2844 4.72201 18.7601 6 20.5 6 20.8321 6 21.1626 5.95272 21.4814 5.85957 21.2972 7.64386 19.7937 9 18 9H5.99997C4.20619 9 2.70278 7.64386 2.51849 5.85957 2.83733 5.95272 3.16781 6 3.49997 6 5.23982 6 6.71552 4.72201 6.96407 3ZM16.8994 6.65761C16.3391 6.1724 15.902 5.61986 15.5881 5H8.41184C8.09793 5.61986 7.66084 6.1724 7.10057 6.65761 6.9591 6.78013 6.8145 6.89426 6.66678 7H17.3331C17.1855 6.89426 17.0409 6.78013 16.8994 6.65761ZM21.5 11.5005C22.0376 11.5005 22.5422 11.3591 22.9786 11.1114 22.9927 11.2391 23 11.369 23 11.5005 23 12.8967 22.1825 14.1019 21 14.6637V21H14V19C14 17.8954 13.1046 17 12 17 10.8954 17 10 17.8954 10 19V21H3V14.6637C1.81753 14.1019 1 12.8967 1 11.5005 1 11.369 1.00725 11.2391 1.02138 11.1114 1.45778 11.3591 1.96237 11.5005 2.5 11.5005 3.61042 11.5005 4.57994 10.8972 5.09865 10.0005H18.9013C19.4201 10.8972 20.3896 11.5005 21.5 11.5005ZM18.9632 12.8097C18.5756 12.5812 18.2296 12.3115 17.9252 12.0005H6.07479C5.77042 12.3115 5.42443 12.5812 5.03683 12.8097 4.834 12.9293 4.62683 13.0333 4.41532 13.1218L5 13.3996V19H8C8 17.8954 8.39052 16.9526 9.17157 16.1716 9.95262 15.3905 10.8954 15 12 15 13.1046 15 14.0474 15.3905 14.8284 16.1716 15.6095 16.9526 16 17.8954 16 19H19V13.3996L19.5847 13.1218C19.3732 13.0333 19.166 12.9293 18.9632 12.8097Z"
+                                                fill="rgba(255,255,255,1)">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span class="ml-2 text-sm"> Katalog </span>
+                                    </span>
+                                </a>
+                                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
+                                    <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                                    <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                                </div>
+                            </div>
+
                             <!--  Tempat Wisata -->
                             <div x-data="{ isActive: false, open: false }">
                                 <!-- active classes 'bg-primary-100 dark:bg-primary' -->
@@ -392,67 +443,68 @@
                                     <!-- active & hover classes 'text-gray-700 dark:text-light' -->
                                     <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
                                 </div>
-                            </div>
 
-                            <!--  Tempat Catalog -->
-                            <div x-data="{ isActive: false, open: false }">
-                                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-                                <a href="./katalog.html"
-                                    class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
-                                    :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button"
-                                    aria-haspopup="true" :aria-expanded="(open || isActive) ? 'true' : 'false'">
-                                    <span aria-hidden="true">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path
-                                                d="M6.96407 3H17.0358C17.2844 4.72201 18.7601 6 20.5 6 20.8321 6 21.1626 5.95272 21.4814 5.85957 21.2972 7.64386 19.7937 9 18 9H5.99997C4.20619 9 2.70278 7.64386 2.51849 5.85957 2.83733 5.95272 3.16781 6 3.49997 6 5.23982 6 6.71552 4.72201 6.96407 3ZM16.8994 6.65761C16.3391 6.1724 15.902 5.61986 15.5881 5H8.41184C8.09793 5.61986 7.66084 6.1724 7.10057 6.65761 6.9591 6.78013 6.8145 6.89426 6.66678 7H17.3331C17.1855 6.89426 17.0409 6.78013 16.8994 6.65761ZM21.5 11.5005C22.0376 11.5005 22.5422 11.3591 22.9786 11.1114 22.9927 11.2391 23 11.369 23 11.5005 23 12.8967 22.1825 14.1019 21 14.6637V21H14V19C14 17.8954 13.1046 17 12 17 10.8954 17 10 17.8954 10 19V21H3V14.6637C1.81753 14.1019 1 12.8967 1 11.5005 1 11.369 1.00725 11.2391 1.02138 11.1114 1.45778 11.3591 1.96237 11.5005 2.5 11.5005 3.61042 11.5005 4.57994 10.8972 5.09865 10.0005H18.9013C19.4201 10.8972 20.3896 11.5005 21.5 11.5005ZM18.9632 12.8097C18.5756 12.5812 18.2296 12.3115 17.9252 12.0005H6.07479C5.77042 12.3115 5.42443 12.5812 5.03683 12.8097 4.834 12.9293 4.62683 13.0333 4.41532 13.1218L5 13.3996V19H8C8 17.8954 8.39052 16.9526 9.17157 16.1716 9.95262 15.3905 10.8954 15 12 15 13.1046 15 14.0474 15.3905 14.8284 16.1716 15.6095 16.9526 16 17.8954 16 19H19V13.3996L19.5847 13.1218C19.3732 13.0333 19.166 12.9293 18.9632 12.8097Z"
-                                                fill="rgba(255,255,255,1)">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <span class="ml-2 text-sm"> Catalog </span>
-                                    </span>
-                                </a>
-                                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
-                                    <!-- active & hover classes 'text-gray-700 dark:text-light' -->
-                                    <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
-                                </div>
-                            </div>
 
-                            <!-- Restaurant -->
-                            <div x-data="{ isActive: false, open: false }">
-                                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-                                <a href="./restaurant.html"
-                                    class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
-                                    :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button"
-                                    aria-haspopup="true" :aria-expanded="(open || isActive) ? 'true' : 'false'">
-                                    <span aria-hidden="true">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path
-                                                d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
-                                        </svg>
-                                    </span>
-                                    <span class="ml-2 text-sm">Restaurant</span>
-                                    <span aria-hidden="true" class="ml-auto">
-                                        <!-- active class 'rotate-180' -->
-                                    </span>
-                                </a>
-                                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
-                                    <!-- active & hover classes 'text-gray-700 dark:text-light' -->
-                                    <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                                <!--  Hotel -->
+                                <div x-data="{ isActive: false, open: false }">
+                                    <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                                    <a href="./hotel.html"
+                                        class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                                        :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button"
+                                        aria-haspopup="true" :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                                        <span aria-hidden="true">
+                                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                <path
+                                                    d="M22 21H2V19H3V4C3 3.44772 3.44772 3 4 3H18C18.5523 3 19 3.44772 19 4V9H21V19H22V21ZM17 19H19V11H13V19H15V13H17V19ZM17 9V5H5V19H11V9H17ZM7 11H9V13H7V11ZM7 15H9V17H7V15ZM7 7H9V9H7V7Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class="ml-2 text-sm"> Hotel </span>
+                                        </span>
+                                    </a>
+                                    <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
+                                        <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                                        <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                                    </div>
                                 </div>
-                            </div>
+
+
+
+                                <!-- Restaurant -->
+                                <div x-data="{ isActive: false, open: false }">
+                                    <!-- active classes 'bg-primary-100 dark:bg-primary' -->
+                                    <a href="./restaurant.html"
+                                        class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
+                                        :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }" role="button"
+                                        aria-haspopup="true" :aria-expanded="(open || isActive) ? 'true' : 'false'">
+                                        <span aria-hidden="true">
+                                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path
+                                                    d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z" />
+                                            </svg>
+                                        </span>
+                                        <span class="ml-2 text-sm">Restaurant</span>
+                                        <span aria-hidden="true" class="ml-auto">
+                                            <!-- active class 'rotate-180' -->
+                                        </span>
+                                    </a>
+                                    <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
+                                        <!-- active & hover classes 'text-gray-700 dark:text-light' -->
+                                        <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
+                                    </div>
+                                </div>
                 </header>
 
                 <!-- Main content -->
-                <main>
-                    <!-- Content header -->
+                <main x-data="{ isFormOpen: false, isUpdateFormOpen:false }">
                     <div
                         class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
-                        <h1 class="text-2xl font-semibold">Restaurant</h1>
+                        <!-- Content header -->
+                        <h1 class="text-2xl font-semibold">Wisata</h1>
                     </div>
-
                     <!--- Tabel -->
                     <div class="w-full lg:w-5/6 mx-auto">
                         <div class="bg-white shadow-md rounded my-6 overflow-x-auto">
@@ -460,10 +512,11 @@
                                 class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200">
                                 <div>
                                     <h2 class="text-xl font-semibold text-gray-800 py-4">
-                                        Form Data Restaurant
+                                        Form Data Tempat Wisata
                                     </h2>
                                     <div class="py-3 inline-flex gap-x-2 justify-self-end">
-                                        <button data-ripple-light="true" data-dialog-target="dialog"
+                                        <!-- Button "Tambah" dengan aksi untuk membuka modal -->
+                                        <button x-on:click="isFormOpen = true" data-dialog-target="dialog"
                                             class="py-2 px-3 inline-flex items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm">
                                             <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" viewBox="0 0 16 16" fill="none">
@@ -473,83 +526,83 @@
                                             Tambah
                                         </button>
                                     </div>
-                                    <table class=" py-4 min-w-full table-auto mx-auto">
+
+                                    <!-- Modal insert-->
+                                    <div id="dialog" x-show="isFormOpen" class="dialog">
+                                        <div class="dialog-overlay" x-on:click="isFormOpen = false"></div>
+                                        <div class="dialog-content">
+                                            <!-- Form input di sini -->
+                                            <form id="newWisataForm" action="#" method="POST" class="p-6">
+                                                <label for="newNomorID" class="font-semibold text-gray-800">Nomor
+                                                    ID</label>
+                                                <input type="text" id="newNomorID" name="newNomorID"
+                                                    class="w-full mb-4 p-2 border text-black" required>
+
+                                                <label for="newTitle" class="font-semibold text-gray-800">Title</label>
+                                                <input type="text" id="newTitle" name="newTitle"
+                                                    class="w-full mb-4 p-2 border text-black" required>
+
+                                                <label for="newDeskripsi"
+                                                    class="font-semibold text-gray-800">Deskripsi</label>
+                                                <textarea id="newDeskripsi" name="new"
+                                                    class="w-full mb-4 p-2 border text-black" required></textarea>
+
+                                                <label for="newLokasi"
+                                                    class="font-semibold text-gray-800">Lokasi</label>
+                                                <textarea id="newLokasi" name="new"
+                                                    class="w-full mb-4 p-2 border text-black" required></textarea>
+
+                                                <label for="newImage" class="font-semibold text-gray-800">Image
+                                                    URL</label>
+                                                <input type="url" id="newImage" name="newImage"
+                                                    class="w-full mb-4 p-2 border text-black" required>
+
+                                                <label for="newStatus"
+                                                    class="font-semibold text-gray-800">Status</label>
+                                                <select id="newStatus" name="newStatus"
+                                                    class="w-full mb-4 p-2 border text-black" required>
+                                                    <option value="active">Active</option>
+                                                    <option value="inactive">Inactive</option>
+                                                </select>
+
+                                                <button type="submit" id="submit"
+                                                    class="py-2 px-4 inline-flex items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm">
+                                                    Simpan
+                                                </button>
+
+                                                <button type="button" x-on:click="isFormOpen = false"
+                                                    class="ml-2 py-2 px-4 inline-flex items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-300 text-gray-800 text-sm">
+                                                    Batal
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- Modal update-->
+
+                                    <!-- Modal update -->
+
+
+
+                                    <table class="py-4 min-w-full table-auto mx-auto">
                                         <thead>
                                             <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                                                <th class="py-3 px-6 text-left">Nama Restaurant</th>
-                                                <th class="py-3 px-6 text-center">Deskripsi</th>
-                                                <th class="py-3 px-6 text-center">Lokasi</th>
-                                                <th class="py-3 px-6 text-center">Gambar</th>
-                                                <th class="py-3 px-6 text-center">Status</th>
-                                                <th class="py-3 px-6 text-center">Actions</th>
+                                                <th class="py-3 px-6 text-left">Nomor ID</th>
+                                                <th class="py-3 px-6 text-left">Title</th>
+                                                <th class="py-3 px-6 text-left">Deskripsi</th>
+                                                <th class="py-3 px-6 text-left">Lokasi</th>
+                                                <th class="py-3 px-6 text-left">Image</th>
+                                                <th class="py-3 px-6 text-left">Status</th>
+                                                <th class="py-3 px-6 text-left">Actions</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="text-gray-600 text-sm font-light">
-                                            <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                                <td class="py-3 px-6 text-left">
-                                                    <div class="flex items-center">
-                                                        <span>Pantai Pangandaran</span>
-                                                    </div>
-                                                </td>
-                                                <td class="py-3 px-6 text-center">
-                                                    <span>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                                                        similique quas aliquid.
-                                                    </span>
-                                                </td>
-                                                <td class="py-3 px-6 text-center">
-                                                    <span>
-                                                        Pangandaran, Jawa Barat
-                                                    </span>
-                                                </td>
-                                                <td class="py-3 px-6 text-center">
-                                                    <img class="w-6 h-6 rounded-full" src="../build/images/pasabar.png"
-                                                        alt="Gambar Tempat Wisata" />
-                                                </td>
-                                                <td class="py-3 px-6 text-center">
-                                                    <span
-                                                        class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">Active</span>
-                                                </td>
-                                                <td class="py-3 px-6 text-center">
-                                                    <div class="flex items-center justify-center space-x-2">
-                                                        <button
-                                                            class="w-4 h-4 text-purple-500 hover:underline focus:outline-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="w-4 h-4 text-purple-500 hover:underline focus:outline-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="w-4 h-4 text-purple-500 hover:underline focus:outline-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                        <tbody class="text-gray-600 text-sm font-light" id="WisataDataBody">
+                                            <!-- Di sini akan ditambahkan baris-baris data oleh JavaScript -->
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                 </main>
+
 
 
 
@@ -756,9 +809,11 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
         <script src="../build/js/script.js"></script>
         <script src="../build/js/main.js"></script>
+        <script src="/js/cont_catalog.js"></script>
 
         <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.1.1/js/controller/cont_logout.js">
         </script>
+        <script type="module" src="https://cdn.jsdelivr.net/gh/pasabar/js-pasabar@0.2.0/js/wisata/wisata.js"></script>
 </body>
 
 </html>
